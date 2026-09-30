@@ -1,163 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nebula Labs — tecnologia, bots e projetos para comunidades digitais.">
-    <title>Nebula Labs — Tecnologia além do comum</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nebula Hub — painel do NebulaBot.">
+<title>Nebula Hub — Nebula Labs</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="stars"></div>
+<div class="bg"></div>
+<header>
+<a class="brand" href="#inicio"><b>✦</b> Nebula<span>Labs</span></a>
+<button class="menu" id="menu">☰</button>
+<nav id="nav">
+<a href="#inicio">Início</a><a href="#dashboard">Dashboard</a><a href="#recursos">Recursos</a><a href="#sobre">Sobre</a>
+</nav>
+<a href="#dashboard" class="header-btn">Abrir Hub</a>
+</header>
 
-    <header class="header">
-        <a href="#inicio" class="logo">
-            <span class="logo-icon">✦</span>
-            <span>Nebula<span class="accent">Labs</span></span>
-        </a>
+<main>
+<section class="hero" id="inicio">
+<div>
+<div class="eyebrow">🌌 NEBULA LABS • NEBULA HUB V1</div>
+<h1>Seu servidor.<br><strong>Um só painel.</strong></h1>
+<p>O Nebula Hub reúne economia, moderação, estatísticas e configurações do NebulaBot em um único lugar.</p>
+<div class="actions"><a href="#dashboard" class="btn primary">Conhecer o Hub →</a><a href="#recursos" class="btn secondary">Ver recursos</a></div>
+</div>
+<div class="hero-preview">
+<div class="window">
+<div class="window-top"><span>● ● ●</span><small>nebula-hub</small></div>
+<div class="preview-body"><div class="mini-sidebar">✦<br>⌂<br>◈<br>⚙</div>
+<div class="mini-content"><small>VISÃO GERAL</small><h3>Meu servidor</h3>
+<div class="mini-grid"><div><b>85</b><span>Membros</span></div><div><b>12.4k</b><span>Mensagens</span></div><div><b class="green">ONLINE</b><span>NebulaBot</span></div></div>
+<div class="mini-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div></div></div></div>
+</section>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+<section class="section" id="dashboard">
+<div class="section-title"><span>01 — DASHBOARD</span><h2>Controle tudo em um lugar.</h2><p>Uma prévia do painel que estamos construindo para o NebulaBot.</p></div>
+<div class="dashboard">
+<aside class="side">
+<div class="side-brand">✦ Nebula Hub</div>
+<button class="side-link selected">⌂ Visão geral</button>
+<button class="side-link">🛡️ Moderação</button>
+<button class="side-link">💰 Economia</button>
+<button class="side-link">📊 Estatísticas</button>
+<button class="side-link">⚙️ Configurações</button>
+<div class="side-bottom">NebulaBot<br><b>🟢 Online</b></div>
+</aside>
+<div class="dash-main">
+<div class="dash-top"><div><span>VISÃO GERAL</span><h3>Servidor principal</h3></div><em>🟢 NebulaBot online</em></div>
+<div class="metrics">
+<div class="metric">👥<small>Membros</small><strong>85</strong><em>+8 esta semana</em></div>
+<div class="metric">💬<small>Mensagens</small><strong>12.430</strong><em>+14% este mês</em></div>
+<div class="metric">💰<small>NebulaCoins</small><strong>248K</strong><em>Em circulação</em></div>
+<div class="metric">🛡️<small>Avisos</small><strong>7</strong><em>Este mês</em></div>
+</div>
+<div class="dash-grid">
+<div class="panel"><div class="panel-head"><h4>Atividade</h4><span>Últimos 7 dias</span></div>
+<div class="chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="days"><span>SEG</span><span>TER</span><span>QUA</span><span>QUI</span><span>SEX</span><span>SÁB</span><span>DOM</span></div></div>
+<div class="panel"><div class="panel-head"><h4>Últimas ações</h4><span>Ver todas</span></div>
+<div class="activity">🛡️ <div><b>Moderação</b><small>Spam removido</small></div><time>2m</time></div>
+<div class="activity">💰 <div><b>Economia</b><small>+500 NebulaCoins</small></div><time>8m</time></div>
+<div class="activity">👤 <div><b>Membro</b><small>Novo membro entrou</small></div><time>21m</time></div>
+</div>
+</div></div></div>
+</section>
 
-        <nav class="nav" id="nav">
-            <a href="#inicio">Início</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#bots">Bots</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
+<section class="section" id="recursos">
+<div class="section-title"><span>02 — RECURSOS</span><h2>Feito para comunidades.</h2><p>O Hub vai centralizar as principais funções do NebulaBot.</p></div>
+<div class="resource-grid">
+<article>🛡️<h3>Moderação</h3><p>Avisos, logs, anti-spam e ferramentas para manter o servidor organizado.</p></article>
+<article>💰<h3>Economia</h3><p>NebulaCoins, loja, rankings, recompensas e histórico de transações.</p></article>
+<article>📊<h3>Estatísticas</h3><p>Acompanhe membros, mensagens e atividade da comunidade.</p></article>
+<article>⚙️<h3>Configuração</h3><p>Configure o bot pelo navegador sem precisar decorar comandos.</p></article>
+</div>
+</section>
 
-    <main>
-        <section class="hero" id="inicio">
-            <div class="hero-content">
-                <div class="badge">🌌 NEBULA LABS</div>
-                <h1>Ideias que viram<br><span>experiências digitais.</span></h1>
-                <p>
-                    Criamos bots, ferramentas e projetos para comunidades
-                    digitais. Tecnologia simples, moderna e feita para ir além.
-                </p>
+<section class="section about" id="sobre">
+<div><span>03 — NEBULA LABS</span><h2>Começamos com um bot. Agora estamos construindo um ecossistema.</h2><p>O Nebula Hub é o próximo passo da Nebula Labs: uma plataforma para transformar o NebulaBot em uma ferramenta completa para comunidades.</p></div>
+<div class="roadmap">
+<div><b>✓</b><span><strong>V1 — Interface</strong><small>Dashboard e identidade visual</small></span></div>
+<div><b>2</b><span><strong>V2 — Bot conectado</strong><small>Dados reais do Discord</small></span></div>
+<div><b>3</b><span><strong>V3 — Contas</strong><small>Login e servidores</small></span></div>
+<div><b>4</b><span><strong>V4 — Plataforma</strong><small>Configuração completa</small></span></div>
+</div>
+</section>
+</main>
 
-                <div class="hero-buttons">
-                    <a href="#projetos" class="btn primary">Explorar projetos →</a>
-                    <a href="#sobre" class="btn secondary">Conhecer a Nebula</a>
-                </div>
-            </div>
-
-            <div class="orbital">
-                <div class="planet"></div>
-                <div class="orbit orbit-one"></div>
-                <div class="orbit orbit-two"></div>
-                <div class="spark spark-one">✦</div>
-                <div class="spark spark-two">✧</div>
-            </div>
-        </section>
-
-        <section class="section" id="projetos">
-            <div class="section-heading">
-                <span>01 — PROJETOS</span>
-                <h2>O que estamos construindo</h2>
-                <p>Projetos pensados para tornar comunidades e experiências digitais melhores.</p>
-            </div>
-
-            <div class="cards">
-                <article class="card">
-                    <div class="card-icon">🤖</div>
-                    <span class="tag">DISCORD</span>
-                    <h3>NebulaBot</h3>
-                    <p>Bot para comunidades com economia, moderação, comandos e ferramentas personalizadas.</p>
-                    <a href="#contato">Saiba mais →</a>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">⚡</div>
-                    <span class="tag">TOOLS</span>
-                    <h3>Ferramentas</h3>
-                    <p>Pequenas ferramentas e soluções criadas para facilitar tarefas do dia a dia.</p>
-                    <a href="#contato">Em desenvolvimento →</a>
-                </article>
-
-                <article class="card">
-                    <div class="card-icon">🚀</div>
-                    <span class="tag">LABS</span>
-                    <h3>Novos projetos</h3>
-                    <p>Experimentos, ideias e produtos que estão saindo do laboratório.</p>
-                    <a href="#contato">Em breve →</a>
-                </article>
-            </div>
-        </section>
-
-        <section class="section bots" id="bots">
-            <div class="section-heading">
-                <span>02 — BOTS</span>
-                <h2>Seu servidor, mais completo.</h2>
-                <p>Automação e diversão em um só lugar.</p>
-            </div>
-
-            <div class="bot-showcase">
-                <div class="bot-icon">🌌</div>
-                <div class="bot-info">
-                    <div class="status"><i></i> Projeto ativo</div>
-                    <h3>NebulaBot</h3>
-                    <p>
-                        Um bot multifuncional para Discord, criado para oferecer
-                        economia, entretenimento, moderação e ferramentas úteis.
-                    </p>
-                    <div class="features">
-                        <span>💰 Economia</span>
-                        <span>🛡️ Moderação</span>
-                        <span>🎮 Diversão</span>
-                        <span>⚙️ Comandos</span>
-                    </div>
-                </div>
-                <div class="bot-action">
-                    <!-- Troque # pelo convite do seu bot quando tiver um -->
-                    <a href="#" class="btn primary" id="botButton">Adicionar bot</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section about" id="sobre">
-            <div class="about-text">
-                <span>03 — SOBRE</span>
-                <h2>Bem-vindo à Nebula Labs.</h2>
-                <p>
-                    A Nebula Labs é um laboratório independente focado em tecnologia,
-                    bots e projetos para comunidades digitais.
-                </p>
-                <p>
-                    Começamos com ideias simples e transformamos essas ideias em
-                    experiências funcionais, modernas e acessíveis.
-                </p>
-            </div>
-
-            <div class="stats">
-                <div><strong>01</strong><span>Laboratório</span></div>
-                <div><strong>∞</strong><span>Ideias</span></div>
-                <div><strong>24/7</strong><span>Construindo</span></div>
-            </div>
-        </section>
-
-        <section class="contact section" id="contato">
-            <div class="contact-box">
-                <span>04 — CONTATO</span>
-                <h2>Tem uma ideia?</h2>
-                <p>Vamos transformar uma ideia em algo real.</p>
-
-                <div class="contact-buttons">
-                    <!-- Substitua os links abaixo pelos seus links reais -->
-                    <a href="#" class="btn primary" id="discordButton">💬 Discord</a>
-                    <a href="mailto:contato@nebulalabs.dev" class="btn secondary">✉️ E-mail</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-logo">✦ Nebula<span>Labs</span></div>
-        <p>© <span id="year"></span> Nebula Labs. Todos os direitos reservados.</p>
-        <p class="made">Feito no laboratório 🌌</p>
-    </footer>
-
-    <script src="script.js"></script>
+<footer><b>✦ Nebula<span>Labs</span></b><p>© <span id="year"></span> Nebula Labs — Construindo além do comum.</p></footer>
+<script src="script.js"></script>
 </body>
 </html>
