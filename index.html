@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nebula Hub — painel da Nebula Labs para gerenciamento de comunidades Discord.">
+  <title>Nebula Hub — Nebula Labs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Nebula Hub">
+      <span class="brand-mark">✦</span>
+      <span><strong>Nebula</strong><small>HUB</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+    <nav id="nav">
+      <a href="#inicio">Início</a>
+      <a href="#painel">Painel</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+    <a class="nav-cta invite-btn" href="https://discord.com/oauth2/authorize?client_id=1492205559506796674&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank" rel="noopener noreferrer">Adicionar NebulaBot ↗</a>
+  </header>
+
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> NEBULA LABS • ONLINE</div>
+        <h1>Seu servidor.<br><span>Um só painel.</span></h1>
+        <p class="hero-text">Gerencie moderação, economia e estatísticas do seu Discord em uma interface simples, rápida e feita para o NebulaBot.</p>
+        <p class="invite-hint">Adicione o NebulaBot ao seu servidor e comece a usar.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="https://discord.com/oauth2/authorize?client_id=1492205559506796674&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank" rel="noopener noreferrer">Adicionar NebulaBot ↗</a>
+          <a class="btn secondary" href="#painel">Ver dashboard</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>85</b><span>Membros</span></div>
+          <div><b>12,4K</b><span>Mensagens</span></div>
+          <div><b>248K</b><span>NebulaCoins</span></div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="window-head">
+          <div class="window-dots"><i></i><i></i><i></i></div>
+          <span>nebula-hub / dashboard</span>
+          <span class="live">● LIVE</span>
+        </div>
+        <div class="mini-layout">
+          <aside>
+            <div class="side-logo">✦</div>
+            <div class="side-icon active">⌂</div>
+            <div class="side-icon">◈</div>
+            <div class="side-icon">♜</div>
+            <div class="side-icon">⚙</div>
+          </aside>
+          <div class="mini-main">
+            <div class="mini-title">
+              <div><small>Servidor principal</small><h3>Visão geral</h3></div>
+              <span class="server-pill"><i></i> Online</span>
+            </div>
+            <div class="mini-stats">
+              <div><small>Membros</small><strong>85</strong><span>+8,2%</span></div>
+              <div><small>Mensagens</small><strong>12.430</strong><span>+14,6%</span></div>
+              <div><small>NebulaCoins</small><strong>248K</strong><span>+21,3%</span></div>
+            </div>
+            <div class="chart-card">
+              <div class="chart-head"><span>Atividade</span><small>Últimos 7 dias</small></div>
+              <div class="bars">
+                <i style="height:34%"></i><i style="height:52%"></i><i style="height:42%"></i>
+                <i style="height:72%"></i><i style="height:58%"></i><i style="height:91%"></i><i style="height:76%"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dashboard-section" id="painel">
+      <div class="section-heading">
+        <div><span class="eyebrow">DASHBOARD</span><h2>Controle tudo em um lugar.</h2></div>
+        <p>Uma prévia do painel que poderá ser conectado ao NebulaBot.</p>
+      </div>
+
+      <div class="dashboard">
+        <aside class="dashboard-side">
+          <div class="dash-brand"><span>✦</span><div><b>Nebula</b><small>HUB</small></div></div>
+          <button class="dash-link active" data-panel="overview">▦ <span>Visão geral</span></button>
+          <button class="dash-link" data-panel="moderation">⚔ <span>Moderação</span></button>
+          <button class="dash-link" data-panel="economy">◉ <span>Economia</span></button>
+          <button class="dash-link" data-panel="stats">⌁ <span>Estatísticas</span></button>
+          <button class="dash-link" data-panel="settings">⚙ <span>Configuração</span></button>
+          <div class="side-bottom"><small>NebulaBot</small><span><i></i> Conectado</span></div>
+        </aside>
+
+        <div class="dash-content">
+          <div class="dash-top">
+            <div>
+              <span class="muted">Servidor principal</span>
+              <h3 id="panelTitle">Visão geral</h3>
+            </div>
+            <div class="profile"><span class="avatar">N</span><span>Admin</span>⌄</div>
+          </div>
+
+          <div id="panel-overview" class="panel active-panel">
+            <div class="cards">
+              <div class="metric"><span>MEMBROS</span><strong>85</strong><em>↗ 8,2%</em></div>
+              <div class="metric"><span>MENSAGENS</span><strong>12.430</strong><em>↗ 14,6%</em></div>
+              <div class="metric"><span>NEBULACOINS</span><strong>248.560</strong><em>↗ 21,3%</em></div>
+              <div class="metric"><span>WARNINGS</span><strong>7</strong><em class="neutral">últimos 30 dias</em></div>
+            </div>
+            <div class="two-col">
+              <div class="dash-card large">
+                <div class="card-title"><b>Atividade do servidor</b><span>7 dias ▾</span></div>
+                <div class="big-chart">
+                  <div class="chart-line"><i style="height:30%"></i><i style="height:44%"></i><i style="height:36%"></i><i style="height:68%"></i><i style="height:54%"></i><i style="height:86%"></i><i style="height:70%"></i></div>
+                  <div class="chart-labels"><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span></div>
+                </div>
+              </div>
+              <div class="dash-card">
+                <div class="card-title"><b>Ações recentes</b><span>Ver todas</span></div>
+                <ul class="activity">
+                  <li><span class="activity-icon warn">!</span><div><b>Warning aplicado</b><small>@Player_02 • há 12 min</small></div></li>
+                  <li><span class="activity-icon coin">◉</span><div><b>Coins adicionadas</b><small>@Player_15 +500 • há 28 min</small></div></li>
+                  <li><span class="activity-icon user">+</span><div><b>Novo membro</b><small>@NebulaFan entrou • há 41 min</small></div></li>
+                  <li><span class="activity-icon bot">✦</span><div><b>NebulaBot iniciado</b><small>há 1 h</small></div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div id="panel-moderation" class="panel">
+            <div class="feature-grid">
+              <div class="dash-card"><span class="feature-icon">⚔</span><h3>Moderação</h3><p>Centralize warnings, punições e registros da equipe.</p><button class="fake-btn">Abrir registros</button></div>
+              <div class="dash-card"><h3>Anti-link</h3><p>Bloqueio de links configurável para proteger o servidor.</p><div class="toggle on"><i></i> Ativado</div></div>
+              <div class="dash-card"><h3>Logs</h3><p>Registre entradas, saídas, mensagens e ações administrativas.</p><div class="toggle on"><i></i> Ativado</div></div>
+            </div>
+          </div>
+
+          <div id="panel-economy" class="panel">
+            <div class="feature-grid">
+              <div class="dash-card"><span class="feature-icon">◉</span><h3>Economia</h3><p>Gerencie a economia baseada em NebulaCoins.</p><strong class="big-number">248.560</strong><small class="muted">coins em circulação</small></div>
+              <div class="dash-card"><h3>Recompensas</h3><p>Controle recompensas, daily e atividades do servidor.</p><button class="fake-btn">Configurar</button></div>
+              <div class="dash-card"><h3>Comandos</h3><p><code>!mine</code> • <code>!daily</code> • <code>!pay</code></p><button class="fake-btn">Ver comandos</button></div>
+            </div>
+          </div>
+
+          <div id="panel-stats" class="panel">
+            <div class="feature-grid">
+              <div class="dash-card"><h3>Crescimento</h3><strong class="big-number">+8,2%</strong><p>Variação de membros no período.</p></div>
+              <div class="dash-card"><h3>Atividade</h3><strong class="big-number">12,4K</strong><p>Mensagens registradas.</p></div>
+              <div class="dash-card"><h3>Engajamento</h3><strong class="big-number">72%</strong><p>Indicador demonstrativo.</p></div>
+            </div>
+          </div>
+
+          <div id="panel-settings" class="panel">
+            <div class="settings-list">
+              <div><div><b>Prefixo</b><small>Prefixo usado nos comandos do bot.</small></div><code>!</code></div>
+              <div><div><b>Anti-link</b><small>Bloquear links enviados no servidor.</small></div><div class="toggle on"><i></i></div></div>
+              <div><div><b>Logs de moderação</b><small>Registrar ações da equipe.</small></div><div class="toggle on"><i></i></div></div>
+              <div><div><b>Status do bot</b><small>Conexão com o NebulaBot.</small></div><span class="server-pill"><i></i> Online</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="prototype-note">⚠️ Esta versão é uma interface demonstrativa. Os números acima são exemplos; a conexão real com Discord/NebulaBot será adicionada posteriormente.</p>
+    </section>
+
+    <section class="section resources" id="recursos">
+      <div class="section-heading center">
+        <span class="eyebrow">RECURSOS</span>
+        <h2>Feito para a sua comunidade.</h2>
+        <p>O Nebula Hub será a camada visual do NebulaBot.</p>
+      </div>
+      <div class="resource-grid">
+        <article><span>⚔</span><h3>Moderação</h3><p>Warnings, logs, anti-link e ferramentas administrativas em um só painel.</p></article>
+        <article><span>◉</span><h3>Economia</h3><p>Acompanhe NebulaCoins e gerencie os recursos da economia.</p></article>
+        <article><span>⌁</span><h3>Estatísticas</h3><p>Visualize crescimento, atividade e indicadores do servidor.</p></article>
+        <article><span>⚙</span><h3>Configuração</h3><p>Ajuste o comportamento do bot sem precisar editar arquivos.</p></article>
+      </div>
+    </section>
+
+    <section class="section roadmap" id="roadmap">
+      <div class="section-heading">
+        <div><span class="eyebrow">ROADMAP</span><h2>De protótipo a plataforma.</h2></div>
+        <p>As próximas etapas do Nebula Hub.</p>
+      </div>
+      <div class="roadmap-list">
+        <div class="road active"><span>01</span><div><b>V1 — Interface</b><p>Dashboard e identidade visual.</p></div><strong>Concluído</strong></div>
+        <div class="road"><span>02</span><div><b>V2 — Bot conectado</b><p>Dados reais vindos do NebulaBot.</p></div><strong>Próximo</strong></div>
+        <div class="road"><span>03</span><div><b>V3 — Contas</b><p>Login com Discord e seleção de servidores.</p></div><strong>Planejado</strong></div>
+        <div class="road"><span>04</span><div><b>V4 — Plataforma</b><p>Configurações completas e múltiplos servidores.</p></div><strong>Planejado</strong></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><span class="brand-mark">✦</span> <b>Nebula Labs</b></div>
+    <span>© <span id="year"></span> Nebula Labs. Nebula Hub.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
